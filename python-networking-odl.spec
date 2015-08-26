@@ -1,4 +1,4 @@
-%global vendor OpenDaylight
+%global drv_vendor OpenDaylight
 %global pkgname networking-odl
 %global srcname networking_odl
 %global docpath doc/build/html
@@ -6,7 +6,7 @@
 Name:           python-%{pkgname}
 Version:        2015.1.2
 Release:        1%{?dist}
-Summary:        %{vendor} OpenStack Neutron driver
+Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
@@ -31,7 +31,7 @@ Requires:       python-pbr
 
 
 %description
-This package contains %{vendor} networking driver for OpenStack Neutron.
+This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 
 
 %prep
