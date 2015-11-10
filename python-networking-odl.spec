@@ -4,8 +4,9 @@
 %global docpath doc/build/html
 
 Name:           python-%{pkgname}
-Version:        2015.1.2
-Release:        1%{?dist}
+Version:        XXX
+Release:        XXX%{?dist}
+Epoch:          1
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
