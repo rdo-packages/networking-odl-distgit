@@ -18,7 +18,7 @@ Source0:        https://pypi.python.org/packages/source/n/%{pkgname}/%{pkgname}-
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-mock
-BuildRequires:  python-neutron-tests
+#BuildRequires:  python-neutron-tests
 BuildRequires:  python-oslo-sphinx
 #BuildRequires:  python-oslotest
 BuildRequires:  python-pbr
