@@ -3,6 +3,8 @@
 %global srcname networking_odl
 %global docpath doc/build/html
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:           python-%{pkgname}
 Version:        XXX
 Release:        XXX%{?dist}
