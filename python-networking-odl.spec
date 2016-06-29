@@ -13,7 +13,7 @@ Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
-Source0:        https://pypi.python.org/packages/source/n/%{pkgname}/%{pkgname}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
@@ -69,3 +69,5 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %{python2_sitelib}/%{srcname}
 %{python2_sitelib}/%{srcname}-%{version}-py%{python2_version}.egg-info
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
+
+%changelog
