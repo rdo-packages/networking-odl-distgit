@@ -6,8 +6,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-%{pkgname}
-Version:        XXX
-Release:        XXX%{?dist}
+Version:        2.0.0
+Release:        1%{?dist}
 Epoch:          1
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
@@ -71,3 +71,6 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Wed Jun 29 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1:2.0.0-1
+- Upstream 2.0.0
+
