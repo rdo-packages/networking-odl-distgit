@@ -7,7 +7,7 @@
 
 Name:           python-%{pkgname}
 Version:        XXX
-Release:        XXX%{?dist}
+Release:        XXX
 Epoch:          1
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
