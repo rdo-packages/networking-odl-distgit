@@ -10,9 +10,9 @@
 %global alphatag .%{shortcommit}git
 
 Name:           python-%{pkgname}
+Epoch:          1
 Version:        2.0.1
 Release:        0.1%{?alphatag}%{?dist}
-Epoch:          1
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
