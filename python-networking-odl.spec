@@ -68,6 +68,13 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %doc %{docpath}
 %{python2_sitelib}/%{srcname}
 %{python2_sitelib}/%{srcname}-%{version}-py%{python2_version}.egg-info
+# FIXME(jpena) The following binary is only in master, no stable/newton yet
+# It will become part of stable/newton, once that happens we can remove the
+# condition
+%if 0%{?dlrn}
+%{_bindir}/neutron-odl-ovs-hostconfig
+%endif
+
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
