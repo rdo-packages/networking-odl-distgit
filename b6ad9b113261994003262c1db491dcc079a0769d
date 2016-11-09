@@ -45,6 +45,23 @@
       "revId": "b6ad9b113261994003262c1db491dcc079a0769d",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_c9714479",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2016-11-09T14:41:16Z",
+      "side": 1,
+      "message": "this is causing failure as it is looking for commit in it...",
+      "revId": "b6ad9b113261994003262c1db491dcc079a0769d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
