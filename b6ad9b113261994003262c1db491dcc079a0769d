@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_89581cfc",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 292
+      },
+      "writtenOn": "2016-11-09T14:40:46Z",
+      "side": 1,
+      "message": "I guess this isn\u0027t necessary any more",
+      "range": {
+        "startLine": 6,
+        "startChar": 4,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "b6ad9b113261994003262c1db491dcc079a0769d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_6963d0b1",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 292
+      },
+      "writtenOn": "2016-11-09T14:40:46Z",
+      "side": 1,
+      "message": "Seems that this should change to version",
+      "range": {
+        "startLine": 42,
+        "startChar": 27,
+        "endLine": 42,
+        "endChar": 43
+      },
+      "revId": "b6ad9b113261994003262c1db491dcc079a0769d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
