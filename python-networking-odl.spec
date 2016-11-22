@@ -7,13 +7,13 @@
 
 Name:           python-%{pkgname}
 Epoch:          1
-Version:        3.0.0
+Version:        3.1.0
 Release:        1%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
-Source0:        http://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
@@ -73,6 +73,9 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Tue Nov 22 2016 Jon Schlueter <jschluet@redhat.com> 1:3.1.0-1
+- Update to 3.1.0
+
 * Wed Nov 09 2016 Alan Pevec <alan.pevec@redhat.com> 1:3.0.0-1
 - Update to 3.0.0
 
