@@ -1,6 +1,9 @@
-# UUID                                  	Group Name
-#
-13f5e2495a2e214cbf807b68cf743bdd3f4d54de	openstack/networking-odl-distgit-core
-63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
-8b234d95f227f8f877bebcc63437a5e51daba631	openstack/networking-odl-distgit-ptl
-global:Registered-Users                 	Registered Users
+# UUID Group Name
+global:Registered-Users	Registered Users
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
+global:Anonymous-Users	Anonymous Users
+e2f26522d0507b9c16ca8960a4cc952b38f31b5e	openstack/networking-odl-ptl
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+9a4a5d4b88371461f7849476ca9ac9c14ddd481d	openstack/networking-odl-core
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
