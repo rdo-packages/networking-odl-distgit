@@ -16,10 +16,12 @@ URL:            https://pypi.python.org/pypi/%{pkgname}
 Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.tar.gz
 
 BuildArch:      noarch
+
+BuildRequires:  git
 BuildRequires:  python2-devel
 BuildRequires:  python-mock
 #BuildRequires:  python-neutron-tests
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-openstackdocstheme
 #BuildRequires:  python-oslotest
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
@@ -38,13 +40,13 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 
 
 %prep
-%setup -q -n %{pkgname}-%{upstream_version}
+%autosetup -n %{pkgname}-%{upstream_version} -S git
 
 
 %build
 rm requirements.txt test-requirements.txt
 %{__python2} setup.py build
-%{__python2} setup.py build_sphinx
+%{__python2} setup.py build_sphinx -b html
 rm %{docpath}/.buildinfo
 
 
