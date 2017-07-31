@@ -34,7 +34,7 @@ BuildRequires:  python-webtest
 Requires:       openstack-neutron-ml2
 Requires:       python-babel
 Requires:       python-pbr
-
+Requires:       python-websocket-client
 
 %description
 This package contains %{drv_vendor} networking driver for OpenStack Neutron.
