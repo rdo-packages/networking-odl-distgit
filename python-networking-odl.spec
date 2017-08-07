@@ -29,7 +29,6 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-sphinx
 BuildRequires:  python-testrepository
 BuildRequires:  python-testtools
-BuildRequires:  python-webtest
 
 Requires:       openstack-neutron-ml2
 Requires:       python-babel
