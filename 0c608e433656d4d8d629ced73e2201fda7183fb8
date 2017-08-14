@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_2449f6d0",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-14T17:13:15Z",
+      "side": 1,
+      "message": "Missing python-neutron-lib, python-stevedore and python-debtcollector.",
+      "revId": "0c608e433656d4d8d629ced73e2201fda7183fb8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
