@@ -25,7 +25,6 @@ BuildRequires:  python-openstackdocstheme
 #BuildRequires:  python-oslotest
 BuildRequires:  python-oslo-config
 BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
 BuildRequires:  python-sphinx
 BuildRequires:  python-testrepository
 BuildRequires:  python-testtools
@@ -35,6 +34,8 @@ Requires:       openstack-neutron-ml2
 Requires:       python-babel
 Requires:       python-pbr
 Requires:       python-websocket-client
+Requires:       python-stevedore
+Requires:       python-debtcollector
 
 %description
 This package contains %{drv_vendor} networking driver for OpenStack Neutron.
@@ -42,7 +43,8 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 
 %prep
 %autosetup -n %{pkgname}-%{upstream_version} -S git
-
+# Remove gate hooks
+rm -rf %{srcname}/tests/contrib
 
 %build
 rm requirements.txt test-requirements.txt
