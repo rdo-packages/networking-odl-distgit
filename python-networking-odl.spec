@@ -25,7 +25,6 @@ BuildRequires:  python-openstackdocstheme
 #BuildRequires:  python-oslotest
 BuildRequires:  python-oslo-config
 BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
 BuildRequires:  python-sphinx
 BuildRequires:  python-testrepository
 BuildRequires:  python-testtools
