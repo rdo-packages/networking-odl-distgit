@@ -46,6 +46,30 @@
       "revId": "74da38afa8a48567abf3793ea49177bee25192a2",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_f5f5dacb",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-16T15:10:32Z",
+      "side": 1,
+      "message": "neutron_lib is imported in networking-odl so it must be added as Requires here. Error in rpmlint is false positive. I think that rpmlint will pass now with python-neutron-lib as Requires because you have fixed the two errors related to contrib scripts but if this still blocks rpmlint, you can add a filter to rpmlint as in https://review.rdoproject.org/r/#/c/8357/",
+      "parentUuid": "5a890539_0a6c019c",
+      "range": {
+        "startLine": 37,
+        "startChar": 16,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "74da38afa8a48567abf3793ea49177bee25192a2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
