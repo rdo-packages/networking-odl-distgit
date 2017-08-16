@@ -22,6 +22,30 @@
       "revId": "74da38afa8a48567abf3793ea49177bee25192a2",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a890539_0a6c019c",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-08-16T07:04:07Z",
+      "side": 1,
+      "message": "correct, then we donot need neutron-lib as a Requires.",
+      "parentUuid": "5a890539_2a529ddd",
+      "range": {
+        "startLine": 37,
+        "startChar": 16,
+        "endLine": 37,
+        "endChar": 34
+      },
+      "revId": "74da38afa8a48567abf3793ea49177bee25192a2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
