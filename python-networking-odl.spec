@@ -1,3 +1,4 @@
+%global milestone .0rc2
 %global drv_vendor OpenDaylight
 %global pkgname networking-odl
 %global srcname networking_odl
@@ -7,13 +8,17 @@
 
 Name:           python-%{pkgname}
 Epoch:          1
-Version:        XXX
-Release:        XXX
+Version:        11.0.0
+Release:        0.1%{?milestone}%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
-Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{upstream_version}.tar.gz
+
+#
+# patches_base=11.0.0.0rc2
+#
 
 BuildArch:      noarch
 
@@ -77,3 +82,6 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Fri Aug 25 2017 Alfredo Moralejo <amoralej@redhat.com> 1:11.0.0-0.1.0rc2
+- Update to 11.0.0.0rc2
+
