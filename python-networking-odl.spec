@@ -72,6 +72,7 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %license LICENSE
 %doc %{docpath}
 %{_bindir}/neutron-odl-ovs-hostconfig
+%{_bindir}/neutron-odl-analyze-journal-logs
 %{python2_sitelib}/%{srcname}
 %{python2_sitelib}/%{srcname}-%{version}-py%{python2_version}.egg-info
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
