@@ -19,23 +19,23 @@ BuildArch:      noarch
 
 BuildRequires:  git
 BuildRequires:  python2-devel
-BuildRequires:  python-mock
-#BuildRequires:  python-neutron-tests
-BuildRequires:  python-openstackdocstheme
-#BuildRequires:  python-oslotest
-BuildRequires:  python-oslo-config
-BuildRequires:  python-pbr
-BuildRequires:  python-sphinx
-BuildRequires:  python-testrepository
-BuildRequires:  python-testtools
+BuildRequires:  python2-mock
+#BuildRequires:  python2-neutron-tests
+BuildRequires:  python2-openstackdocstheme
+#BuildRequires:  python2-oslotest
+BuildRequires:  python2-oslo-config
+BuildRequires:  python2-pbr
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-testtools
 
 Requires:       openstack-neutron-ml2
-Requires:       python-babel
-Requires:       python-pbr
-Requires:       python-websocket-client
-Requires:       python-stevedore
-Requires:       python-neutron-lib
-Requires:       python-debtcollector
+Requires:       python2-babel
+Requires:       python2-pbr
+Requires:       python2-websocket-client
+Requires:       python2-stevedore
+Requires:       python2-neutron-lib >= 1.13.0
+Requires:       python2-debtcollector
 
 %description
 This package contains %{drv_vendor} networking driver for OpenStack Neutron.
