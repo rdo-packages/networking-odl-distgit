@@ -49,8 +49,9 @@ rm -rf %{srcname}/tests/contrib
 %build
 rm requirements.txt test-requirements.txt
 %{__python2} setup.py build
-%{__python2} setup.py build_sphinx -b html
-rm %{docpath}/.buildinfo
+export PYTHONPATH=.
+sphinx-build -W -b html doc/source %{docpath}
+rm -rf %{docpath}/.{buildinfo,doctrees}
 
 
 #%check
