@@ -34,7 +34,7 @@ Requires:       python2-babel
 Requires:       python2-pbr
 Requires:       python-websocket-client
 Requires:       python2-stevedore
-Requires:       python2-neutron-lib >= 1.13.0
+Requires:       python2-neutron-lib >= 1.18.0
 Requires:       python2-debtcollector
 
 %description
