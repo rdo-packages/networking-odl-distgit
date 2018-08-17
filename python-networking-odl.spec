@@ -34,8 +34,12 @@ Requires:       python2-babel
 Requires:       python2-pbr
 Requires:       python-websocket-client
 Requires:       python2-stevedore
-Requires:       python2-neutron-lib >= 1.13.0
+Requires:       python2-neutron-lib >= 1.18.0
 Requires:       python2-debtcollector
+Requires:       python2-networking-bgpvpn >= 8.0.0
+Requires:       python2-networking-l2gw >= 12.0.0
+Requires:       python2-networking-sfc >= 6.0.0
+Requires:       openstack-neutron-lbaas >= 13.0.0.0b1
 
 %description
 This package contains %{drv_vendor} networking driver for OpenStack Neutron.
