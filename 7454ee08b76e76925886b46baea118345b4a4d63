@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_939bb8c9",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-08-21T07:02:31Z",
+      "side": 1,
+      "message": "so all these seems optional, they are enabled whenever required in networking-odl ci, so i will drop these and let deployment tools handle these whenever needed.",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 53
+      },
+      "revId": "7454ee08b76e76925886b46baea118345b4a4d63",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
