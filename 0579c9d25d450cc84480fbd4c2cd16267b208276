@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_9aab92d6",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 565
+      },
+      "writtenOn": "2018-10-29T18:54:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_a68646d9",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 28
+      },
+      "revId": "0579c9d25d450cc84480fbd4c2cd16267b208276",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_c6837acb",
         "filename": "python-networking-odl.spec",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-29T10:01:56Z",
       "side": 1,
       "message": "This only works when building a tag, to work fine with any commit, use:\n\n%{pyver_sitelib}/%{srcname}-*.egg-info",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 68
+      },
+      "revId": "0579c9d25d450cc84480fbd4c2cd16267b208276",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_bab09644",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 565
+      },
+      "writtenOn": "2018-10-29T18:54:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_c6837acb",
       "range": {
         "startLine": 81,
         "startChar": 0,

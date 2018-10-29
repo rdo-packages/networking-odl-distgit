@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_daa8eadd",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 565
+      },
+      "writtenOn": "2018-10-29T18:54:12Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "9abe1de1_e67c3eed",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 39
+      },
+      "revId": "9fac8d00506f815ea541aab6c1ef0e14453fe319",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_067a92f1",
         "filename": "python-networking-odl.spec",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-10-29T10:01:56Z",
       "side": 0,
       "message": "You need to keep all this, it\u0027s not included in pyver_install macro.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 60
+      },
+      "revId": "9fac8d00506f815ea541aab6c1ef0e14453fe319",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_faa5ee03",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 565
+      },
+      "writtenOn": "2018-10-29T18:54:12Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "9abe1de1_067a92f1",
       "range": {
         "startLine": 66,
         "startChar": 0,
