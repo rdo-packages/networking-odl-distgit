@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_3a4b6689",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-10-30T16:41:08Z",
+      "side": 1,
+      "message": "remove this",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 13
+      },
+      "revId": "62cb1c66fb77978a42956eea748aadff9712cd9d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
