@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_04bb9b28",
+        "filename": "python-networking-odl.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 565
+      },
+      "writtenOn": "2018-11-28T21:43:37Z",
+      "side": 1,
+      "message": "Since uncommenting this out raised a myriad of flags, I think it should be handled in a separate change - probably by the ODL team so they can ensure the repo is test-ready.",
+      "revId": "cccb2ac6927c3b794282bc92c16af43d3d0d2191",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
