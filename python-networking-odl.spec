@@ -34,6 +34,14 @@ Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.
 BuildArch:      noarch
 
 BuildRequires:  git
+
+%description
+%{common_desc}
+
+%package -n python%{pyver}-%{pkgname}
+Summary:        %{drv_vendor} OpenStack Neutron driver
+%{?python_provide:%python_provide python%{pyver}-%{pkgname}}
+
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-mock
 #BuildRequires:  python%{pyver}-neutron-tests
@@ -58,7 +66,7 @@ Requires:       python%{pyver}-stevedore
 Requires:       python%{pyver}-neutron-lib >= 1.18.0
 Requires:       python%{pyver}-debtcollector
 
-%description
+%description -n python%{pyver}-%{pkgname}
 %{common_desc}
 
 
@@ -87,7 +95,7 @@ install -d -m 755 %{buildroot}%{_sysconfdir}/neutron/plugins/ml2
 mv %{buildroot}/usr/etc/neutron/* %{buildroot}%{_sysconfdir}/neutron/plugins/ml2
 chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 
-%files
+%files -n python%{pyver}-%{pkgname}
 %license LICENSE
 %doc %{docpath}
 %{_bindir}/neutron-odl-ovs-hostconfig
