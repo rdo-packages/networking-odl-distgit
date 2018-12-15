@@ -1,0 +1,9 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+1: Alex Schultz <aschultz@next-development.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Sat, 15 Dec 2018 04:09:01 +0000
+Reviewed-on: https://review.rdoproject.org/r/17856
+Project: openstack/networking-odl-distgit
+Branch: refs/heads/rpm-master
