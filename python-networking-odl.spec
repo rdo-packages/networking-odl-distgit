@@ -17,6 +17,7 @@
 # End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%global with_doc 1
 
 %global common_desc \
 This package contains %{drv_vendor} networking driver for OpenStack Neutron.
@@ -45,7 +46,9 @@ Summary:        %{drv_vendor} OpenStack Neutron driver
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-mock
 #BuildRequires:  python%{pyver}-neutron-tests
+%if 0%{?with_doc}
 BuildRequires:  python%{pyver}-openstackdocstheme
+%endif
 #BuildRequires:  python%{pyver}-oslotest
 BuildRequires:  python%{pyver}-oslo-config
 BuildRequires:  python%{pyver}-pbr
@@ -78,9 +81,11 @@ rm -rf %{srcname}/tests/contrib
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 export PYTHONPATH=.
 sphinx-build-%{pyver} -W -b html doc/source %{docpath}
 rm -rf %{docpath}/.{buildinfo,doctrees}
+%endif
 
 %check
 export PYTHON=%{pyver_bin}
@@ -97,7 +102,9 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 
 %files -n python%{pyver}-%{pkgname}
 %license LICENSE
+%if 0%{?with_doc}
 %doc %{docpath}
+%endif
 %{_bindir}/neutron-odl-ovs-hostconfig
 %{_bindir}/neutron-odl-analyze-journal-logs
 %{pyver_sitelib}/%{srcname}
