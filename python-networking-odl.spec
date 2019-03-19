@@ -56,16 +56,23 @@ BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-stestr
 BuildRequires:  python%{pyver}-testtools
 
+Requires:       openstack-ceilometer >= 11.0.0
 Requires:       openstack-neutron-ml2
-Requires:       python%{pyver}-babel
-Requires:       python%{pyver}-pbr
+Requires:       openstack-neutron-lbaas >= 1:13.0.0
+Requires:       openstack-neutron >= 1:13.0.0
+Requires:       python%{pyver}-babel >= 2.5.3
+Requires:       python%{pyver}-networking-bgpvpn >= 8.0.0
+Requires:       python%{pyver}-networking-l2gw >= 12.0.0
+Requires:       python%{pyver}-networking-sfc >= 6.0.0
+Requires:       python%{pyver}-pbr >= 3.1.1
+
 # Handle python2 exception
 %if %{pyver} == 2
-Requires:  python-websocket-client
+Requires:  python-websocket-client >= 0.47.0
 %else
-Requires:  python%{pyver}-websocket-client
+Requires:  python%{pyver}-websocket-client >= 0.47.0
 %endif
-Requires:       python%{pyver}-stevedore
+Requires:       python%{pyver}-stevedore >= 1.28.0
 Requires:       python%{pyver}-neutron-lib >= 1.18.0
 Requires:       python%{pyver}-debtcollector
 
