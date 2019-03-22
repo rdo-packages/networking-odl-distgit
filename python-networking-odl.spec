@@ -1,3 +1,4 @@
+%global milestone .0rc1
 %global drv_vendor OpenDaylight
 %global pkgname networking-odl
 %global srcname networking_odl
@@ -24,13 +25,17 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 
 Name:           python-%{pkgname}
 Epoch:          1
-Version:        XXX
-Release:        XXX
+Version:        14.0.0
+Release:        0.1%{?milestone}%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
-Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{upstream_version}.tar.gz
+
+#
+# patches_base=14.0.0.0rc1
+#
 
 BuildArch:      noarch
 
@@ -119,3 +124,6 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 1:14.0.0-0.1.0rc1
+- Update to 14.0.0.0rc1
+
