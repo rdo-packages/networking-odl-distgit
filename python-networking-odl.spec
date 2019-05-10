@@ -7,7 +7,7 @@
 
 Name:           python-%{pkgname}
 Epoch:          1
-Version:        11.0.0
+Version:        11.0.1
 Release:        1%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
@@ -79,6 +79,9 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Fri May 10 2019 RDO <dev@lists.rdoproject.org> 1:11.0.1-1
+- Update to 11.0.1
+
 * Wed Aug 30 2017 rdo-trunk <javier.pena@redhat.com> 1:11.0.0-1
 - Update to 11.0.0
 
