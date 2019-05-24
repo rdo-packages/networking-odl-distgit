@@ -60,7 +60,6 @@ Requires:       openstack-ceilometer-common >= 11.0.0
 Requires:       openstack-neutron-ml2
 Requires:       openstack-neutron-lbaas >= 1:13.0.0
 Requires:       openstack-neutron >= 1:13.0.0
-Requires:       python%{pyver}-babel >= 2.5.3
 # NOTE(jpena): networking-bgpvpn requires networking-odl, so we need to avoid
 # the circular dependency
 #Requires:       python%{pyver}-networking-bgpvpn >= 8.0.0
