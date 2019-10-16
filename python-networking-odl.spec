@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %global drv_vendor OpenDaylight
 %global pkgname networking-odl
 %global srcname networking_odl
@@ -26,7 +25,7 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 Name:           python-%{pkgname}
 Epoch:          1
 Version:        15.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
@@ -50,7 +49,6 @@ BuildRequires:  python%{pyver}-mock
 %if 0%{?with_doc}
 BuildRequires:  python%{pyver}-openstackdocstheme
 %endif
-# patches_base=15.0.0.0rc1
 #BuildRequires:  python%{pyver}-oslotest
 BuildRequires:  python%{pyver}-oslo-config
 BuildRequires:  python%{pyver}-pbr
@@ -121,6 +119,9 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Wed Oct 16 2019 RDO <dev@lists.rdoproject.org> 1:15.0.0-1
+- Update to 15.0.0
+
 * Fri Oct 04 2019 RDO <dev@lists.rdoproject.org> 1:15.0.0-0.1.0rc1
 - Update to 15.0.0.0rc1
 
