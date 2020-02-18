@@ -25,7 +25,7 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 
 Name:           python-%{pkgname}
 Epoch:          1
-Version:        14.0.0
+Version:        14.0.1
 Release:        1%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
@@ -124,6 +124,9 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Tue Feb 18 2020 RDO <dev@lists.rdoproject.org> 1:14.0.1-1
+- Update to 14.0.1
+
 * Wed Apr 10 2019 RDO <dev@lists.rdoproject.org> 1:14.0.0-1
 - Update to 14.0.0
 
