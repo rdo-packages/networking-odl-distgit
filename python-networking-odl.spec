@@ -58,14 +58,13 @@ BuildRequires:  python%{pyver}-testtools
 
 Requires:       openstack-ceilometer-common >= 11.0.0
 Requires:       openstack-neutron-ml2
-Requires:       openstack-neutron >= 1:13.0.0
+Requires:       openstack-neutron >= 1:16.0.0
 # NOTE(jpena): networking-bgpvpn requires networking-odl, so we need to avoid
 # the circular dependency
 #Requires:       python%{pyver}-networking-bgpvpn >= 8.0.0
 Requires:       python%{pyver}-networking-l2gw >= 12.0.0
-Requires:       python%{pyver}-networking-sfc >= 6.0.0
-Requires:       python%{pyver}-pbr >= 3.1.1
-
+Requires:       python%{pyver}-networking-sfc >= 10.0.0
+Requires:       python%{pyver}-pbr >= 4.0.0
 # Handle python2 exception
 %if %{pyver} == 2
 Requires:  python-websocket-client >= 0.47.0
@@ -73,7 +72,7 @@ Requires:  python-websocket-client >= 0.47.0
 Requires:  python%{pyver}-websocket-client >= 0.47.0
 %endif
 Requires:       python%{pyver}-stevedore >= 1.28.0
-Requires:       python%{pyver}-neutron-lib >= 1.18.0
+Requires:       python%{pyver}-neutron-lib >= 2.0.0
 Requires:       python%{pyver}-debtcollector
 
 %description -n python%{pyver}-%{pkgname}
