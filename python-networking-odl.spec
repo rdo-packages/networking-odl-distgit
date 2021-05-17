@@ -83,6 +83,8 @@ Requires:       python3-debtcollector
 %autosetup -n %{pkgname}-%{upstream_version} -S git
 # Remove gate hooks
 rm -rf %{srcname}/tests/contrib
+# Let RPM handle the dependencies
+rm -f {,test-}requirements.txt
 
 %build
 %{py3_build}
