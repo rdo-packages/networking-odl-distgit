@@ -14,8 +14,8 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 
 Name:           python-%{pkgname}
 Epoch:          1
-Version:        XXX
-Release:        XXX
+Version:        19.0.0
+Release:        1%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
@@ -120,3 +120,6 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Mon Oct 11 2021 RDO <dev@lists.rdoproject.org> 1:19.0.0-1
+- Update to 19.0.0
+
