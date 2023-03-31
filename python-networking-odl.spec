@@ -1,4 +1,3 @@
-%global milestone .0rc1
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0xa7475c5f2122fec3f90343223fe3bf5aad1080e4
 %global drv_vendor OpenDaylight
@@ -16,14 +15,12 @@ This package contains %{drv_vendor} networking driver for OpenStack Neutron.
 Name:           python-%{pkgname}
 Epoch:          1
 Version:        22.0.0
-Release:        0.1%{?milestone}%{?dist}
+Release:        1%{?dist}
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
 License:        ASL 2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
 Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{upstream_version}.tar.gz
-#
-# patches_base=22.0.0.0rc1
 #
 
 # Required for tarball sources verification
@@ -125,6 +122,9 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+* Fri Mar 31 2023 RDO <dev@lists.rdoproject.org> 1:22.0.0-1
+- Update to 22.0.0
+
 * Mon Mar 20 2023 RDO <dev@lists.rdoproject.org> 1:22.0.0-0.1.0rc1
 - Update to 22.0.0.0rc1
 
