@@ -120,3 +120,4 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/networking-odl/commit/517df91c9ef84b4e462e6cc9d70b7e14ad5a511c
