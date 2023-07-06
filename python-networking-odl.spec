@@ -4,10 +4,17 @@
 %global pkgname networking-odl
 %global srcname networking_odl
 %global docpath doc/build/html
-
+%global with_doc 1
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
-%global with_doc 1
+
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
+
+# Exclude sphinx from BRs if docs are disabled
+%if ! 0%{?with_doc}
+%global excluded_brs %{excluded_brs} sphinx openstackdocstheme
+%endif
 
 %global common_desc \
 This package contains %{drv_vendor} networking driver for OpenStack Neutron.
@@ -18,7 +25,7 @@ Version:        XXX
 Release:        XXX
 Summary:        %{drv_vendor} OpenStack Neutron driver
 
-License:        ASL 2.0
+License:        Apache-2.0
 URL:            https://pypi.python.org/pypi/%{pkgname}
 Source0:        https://tarballs.openstack.org/%{pkgname}/%{pkgname}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
@@ -42,34 +49,12 @@ BuildRequires:  git-core
 
 %package -n python3-%{pkgname}
 Summary:        %{drv_vendor} OpenStack Neutron driver
-%{?python_provide:%python_provide python3-%{pkgname}}
 
 BuildRequires:  python3-devel
-BuildRequires:  python3-mock
-#BuildRequires:  python3-neutron-tests
-%if 0%{?with_doc}
-BuildRequires:  python3-openstackdocstheme
-%endif
-#BuildRequires:  python3-oslotest
-BuildRequires:  python3-oslo-config
-BuildRequires:  python3-pbr
-BuildRequires:  python3-sphinx
-BuildRequires:  python3-stestr
-BuildRequires:  python3-testtools
-
+BuildRequires:  pyproject-rpm-macros
 Requires:       openstack-ceilometer-common >= 11.0.0
 Requires:       openstack-neutron-ml2
 Requires:       openstack-neutron >= 1:16.0.0
-# NOTE(jpena): networking-bgpvpn requires networking-odl, so we need to avoid
-# the circular dependency
-#Requires:       python3-networking-bgpvpn >= 8.0.0
-Requires:       python3-networking-l2gw >= 12.0.0
-Requires:       python3-networking-sfc >= 10.0.0
-Requires:       python3-pbr >= 4.0.0
-Requires:  python3-websocket-client >= 0.47.0
-Requires:       python3-stevedore >= 1.28.0
-Requires:       python3-neutron-lib >= 2.0.0
-Requires:       python3-debtcollector
 
 %description -n python3-%{pkgname}
 %{common_desc}
@@ -83,25 +68,43 @@ Requires:       python3-debtcollector
 %autosetup -n %{pkgname}-%{upstream_version} -S git
 # Remove gate hooks
 rm -rf %{srcname}/tests/contrib
-# Let RPM handle the dependencies
-rm -f {,test-}requirements.txt
+
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs}; do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+# Automatic BR generation
+%generate_buildrequires
+%if 0%{?with_doc}
+  %pyproject_buildrequires -t -e %{default_toxenv},docs
+%else
+  %pyproject_buildrequires -t -e %{default_toxenv}
+%endif
 
 %build
-%{py3_build}
+%pyproject_wheel
 
 %if 0%{?with_doc}
 export PYTHONPATH=.
-sphinx-build-3 -W -b html doc/source %{docpath}
+%tox -e docs
 rm -rf %{docpath}/.{buildinfo,doctrees}
 %endif
 
 %check
-export PYTHON=%{__python3}
-#stestr-3 run
-
+%tox -e %{default_toxenv}
 
 %install
-%{py3_install}
+%pyproject_install
 
 # Move config file to proper location
 install -d -m 755 %{buildroot}%{_sysconfdir}/neutron/plugins/ml2
@@ -116,7 +119,7 @@ chmod 640 %{buildroot}%{_sysconfdir}/neutron/plugins/*/*.ini
 %{_bindir}/neutron-odl-ovs-hostconfig
 %{_bindir}/neutron-odl-analyze-journal-logs
 %{python3_sitelib}/%{srcname}
-%{python3_sitelib}/%{srcname}-*.egg-info
+%{python3_sitelib}/%{srcname}-*.dist-info
 %config(noreplace) %attr(0640, root, neutron) %{_sysconfdir}/neutron/plugins/ml2/*.ini
 
 %changelog
